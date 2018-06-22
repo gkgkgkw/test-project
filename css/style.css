@@ -1,0 +1,358 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+/*reset*/
+* {margin: 0; padding: 0;}
+
+ul, li {
+list-style: none;
+}
+a {
+  text-decoration: none; color: inherit;
+}
+h1, a, ul, div, form,input {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body {
+  font-family: 'Muli', "Apple SD Gothic Neo", sans-serif;
+  font-size: 12px;
+  color: #222;
+}
+i.fa {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  margin-bottom: 4px;
+}
+i.fa span {
+  position: absolute;
+  left: -999px;
+}
+
+/*본문바로가기*/
+#skip-nav {
+  position: fixed;
+  left: 0;
+  top: -41px;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  transition: all 0.3s;
+  z-index: 1000;
+}
+#skip-nav:focus {
+  top: 0;
+}
+
+/*header*/
+#header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+}
+#header #gnb {
+  width: 1200px;
+  margin: 0 auto;
+}
+#header #gnb h1 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: 100;
+  color: #fff;
+  line-height: 50px;
+  display: inline;
+}
+#header #gnb>.nav {
+  float: right;
+  right: 0;
+  line-height: 50px;
+  color: #fff;
+}
+#header #gnb .nav>li {
+  float: left;
+  margin-left: 30px;
+}
+#header #gnb .nav li.nav-search input[type="text"] {
+  top: 20px;
+  width: 0px;
+  height: 12px;
+  color: #000;
+  background: rgba(255, 255, 255, 0);
+  outline: inherit;
+  -webkit-transition: all 0.3s ease 0.5s;
+}
+#header #gnb .nav li.nav-products ul.products {
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.66);
+  color: #000;
+  display: none;
+}
+#header #gnb .nav li.nav-products ul.products li {
+  line-height: 24px;
+}
+#header #gnb .nav li.nav-products ul.products li:nth-child(10) {
+  font-weight: 900;
+}
+#header #gnb .nav li.nav-products ul.products li:nth-child(11) {
+  margin-top: 12px;
+  border-top: 1px dotted;
+  padding-top: 5px;
+  color: #8888;
+}
+#header #gnb .nav li.nav-promotion {
+  background: #fff;
+  padding: 0 10px;
+  color: #f2001e;
+  transition: all 1s;
+}
+
+/*header hover*/
+#header #gnb .nav>li:hover {
+  color: #000;
+}
+#header #gnb .nav li.nav-search:hover input[type="text"] {
+  width: 110px;
+  padding: 5px;
+  border-bottom: #000 solid 1px;
+  -webkit-transition: all 0.3s ease 0.5s;
+}
+#header #gnb .nav li.nav-promotion:focus,
+#header #gnb .nav li.nav-promotion:hover {
+  background: #f2001e;
+  color: #fff;
+}
+#header #gnb .nav li.nav-products ul.products li:focus,
+#header #gnb .nav li.nav-products ul.products li:hover {
+  text-decoration: underline;
+}
+
+/*main 공통부문*/
+#main {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 1000px;
+}
+#main section {
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+}
+#main div.main-contents {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 400px;
+  color: #fff;
+}
+#main div.main-contents h2 {
+  font-size: 40px;
+  line-height: 46px;
+  text-transform: uppercase;
+}
+#main div.main-contents p {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 30px 0;
+}
+#main div.main-contents>article.main-btn {
+  display: inline-block;
+}
+#main div.main-contents>article.main-btn>div.shop {
+  margin-left: 2px;
+  font-weight: bolder;
+}
+#main div.main-contents>article.main-btn>span.shop-line {
+  display: inline-block;
+  width: 100px;
+  height: 5px;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: skewX(40deg);
+}
+/*main1*/
+#main section.main1 {
+  background: url(../img/main01.jpg) no-repeat center;
+  background-size: cover;
+  display: block;
+}
+/*main2*/
+#main section.main2 {
+  background: url(../img/main02.jpg) no-repeat center;
+  background-size: cover;
+  display: none;
+}
+/*main3*/
+#main section.main3 {
+  display: none;
+}
+#main section.main3 div.main3-bg {
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+}
+
+/*indicator*/
+#main ul.indicator {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+  line-height: 25px;
+}
+#main ul.indicator li {
+  display: inline-block;
+  margin: 0 6px;
+}
+#main ul.indicator li a {
+  display: block;
+  width: 15px;
+  height: 12px;
+  border: 1px solid #ffff;
+  background: #ffff;
+  border-radius: 30px;
+  overflow: hidden;
+  text-indent: -999px;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.5s
+}
+#main ul.indicator li.on a {
+  border-color: #F2001E;
+  width: 25px;
+  background: rgba(242, 0, 30, .9);
+}
+
+/*control*/
+#main ul.indicator p.control {
+  position: relative;
+  text-align: center;
+  display: block;
+  margin-left: -15px;
+}
+#main ul.indicator p.control a.play {
+  position: absolute;
+  display: inline-block;
+  font-size: 20px;
+  color: #ffff;
+  text-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+/*container*/
+#container div.container-box {
+  position: relative;
+  width: 1200px;
+  padding: 100px 0;
+  margin: 0 auto;
+}
+#container div.container-box h2 {
+  text-align: center;
+  font-size: 1.6vw;
+  letter-spacing: 18px;
+  font-weight: 900;
+}
+#container div.container-box p {
+  display: inline-block;
+  padding: 16px;
+  font-size: 1vw;
+  border: 1px solid #f2001e;
+  margin-top: 60px;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+  color: #f2001e;
+  transition: all 0.5s
+}
+#container div.container-box p:hover,
+#container div.container-box p:focus {
+  background: #f2001e;
+  color: #ffff;
+}
+#container div.container-box ul.category {
+  position: relative;
+}
+#container div.container-box ul.category li a {
+  position: relative;
+  float: left;
+  width: 200px;
+  line-height: 30px;
+  font-size: 1.4vw;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 80px;
+}
+#container div.container-box ul.category li span {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: none;
+}
+#container ul.category-image {
+  position: relative;
+  height: 390px;
+  margin: 0 auto;
+  width: 1200px;
+  padding-top: 50px;
+}
+#container ul.category-image li {
+  float: left;
+  margin-bottom: 15px;
+  background: #ffffff;
+}
+#container ul.category-image li img {
+  width: 390px;
+  height: 390px;
+}
+#container ul.category-image li:nth-child(2) {
+  margin: 0 15px;
+}
+#container ul.category-image li:nth-child(5) {
+  margin: 0 15px;
+}
+#container ul.category-image li:hover a {
+  background: #F2001E;
+}
+
+/*fixheader*/
+#header-clone {position: fixed; width: 100%; height: 35px; top: -35px; z-index: 10; opacity: 0.9; background: rgba(0,0,0,0.9); transition: all 0.3s;}
+#header-clone.on {top: 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

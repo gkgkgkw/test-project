@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,IAAI,CAAC;EACH,KAAK,EAAE,IAAI;CACZ;;ACFD,AAAA,OAAO,CAAA;EACL,KAAK,EAAE,IAAI;CACZ;;ACFD,AAAA,CAAC,CAAC;EACA,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX",
+    "sources": [
+        "common.scss",
+        "_tab.scss",
+        "_button.scss",
+        "_reset.scss"
+    ],
+    "names": [],
+    "file": "common.css"
+}
